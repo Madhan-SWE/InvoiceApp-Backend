@@ -1,0 +1,33 @@
+Employee:
+
+{
+    "firstname": "Madhankumar",
+    "lastname": "Chellamuthu",
+    "email": "rcmadhankumar@gmail.com",
+    "password": "123",
+    "userorg": "601bf003cd001033d4dd4a67",
+    "manager": "601d51e844461d35409cc684"
+}
+
+Manager:
+
+{
+    "firstname": "Madhankumar",
+    "lastname": "Chellamuthu",
+    "email": "rcmadhankumar@gmail.com",
+    "password": "123",
+    "userorg": "601bf003cd001033d4dd4a67"
+}
+
+Admin:
+
+{
+    "firstname": "Madhankumar",
+    "lastname": "Chellamuthu",
+    "email": "rcmadhankumar@gmail.com",
+    "password": "123"
+}
+
+token for admin
+===============
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDFkNTFjZTQ0NDYxZDM1NDA5Y2M2ODIiLCJlbWFpbCI6InJjbWFkaGFua3VtYXJAZ21haWwuY29tIiwiZmlyc3RuYW1lIjoiTWFkaGFua3VtYXIiLCJhY2Nlc3MiOiIxMTExIiwidXNlclR5cGUiOiJhZG1pbiIsImlhdCI6MTYxMjUzOTQyNiwiZXhwIjoxNjEyNjI1ODI2fQ.jyvttWoPHPOgN1FZlrieAJsammcN8jbqLQjMtbtsm7E
