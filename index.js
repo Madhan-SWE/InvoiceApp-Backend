@@ -9,8 +9,14 @@ const invoiceAPIs = require("./Routes/Invoice");
 const itemAPIs = require("./Routes/Items");
 const orgAPIs = require("./Routes/Orgs");
 const customerAPIs = require("./Routes/Customers");
+const userAPIs = require("./Routes/Users");
 
 const adminOps = require("./Routes/AdminOps");
+
+var corsOptions = {
+    origin: 'http://netlify.com:8080',
+    optionsSuccessStatus: 200 // For legacy browser support
+}
 
 
 
@@ -18,8 +24,8 @@ const port = process.env.PORT;
 
 const app = express();
 app.use(express.json());
-app.use(cors());
-
+// app.use(cors());
+app.use(cors(corsOptions));
 
 app.use("/admin", adminOps);
 
@@ -27,12 +33,17 @@ app.use("/api/v1", invoiceAPIs);
 app.use("/api/v1", itemAPIs);
 app.use("/api/v1", orgAPIs);
 app.use("/api/v1/", customerAPIs);
+app.use("/api/v1/users", userAPIs);
 
 
 
 app.get("/", async (req, res) => {
     try{
         console.log("hello")
+        console.log(req.headers.host)
+        console.log(req.headers.origin)
+        console.log(req.hostname)
+        //console.log(req)//
     }
     catch(err){
 

@@ -127,7 +127,7 @@ userAPIs.post(
 
 userAPIs.post(
     "/manager/employee/register",
-    allowPermittedUser[("admin", "manager")],
+    allowPermittedUser(["admin", "manager"]),
     async (req, res) => {
         try {
             let client = await mongodb.connect(dbUrl);
@@ -419,7 +419,7 @@ userAPIs.post("/login", async (req, res) => {
 
 userAPIs.put(
     "/edit/access/:email",
-    allowPermittedUser[("admin", "manager")],
+    allowPermittedUser(["admin", "manager"]),
     async (req, res) => {
         try {
             let client = await mongodb.connect(dbUrl);
@@ -467,7 +467,7 @@ userAPIs.put(
 
 userAPIs.put(
     "/edit/:manager/:email",
-    allowPermittedUser[("admin", "manager")],
+    allowPermittedUser(["admin", "manager"]),
     async (req, res) => {
         try {
             let client = await mongodb.connect(dbUrl);
@@ -520,7 +520,7 @@ userAPIs.put(
 
 userAPIs.put(
     "/admin/edit/:userType/:email",
-    allowPermittedUser[("admin", "manager")],
+    allowPermittedUser(["admin", "manager"]),
     async (req, res) => {
         try {
             let client = await mongodb.connect(dbUrl);
@@ -568,7 +568,7 @@ userAPIs.put(
 
 userAPIs.post(
     "/users/:manager",
-    allowPermittedUser[("admin", "manager")],
+    allowPermittedUser(["admin", "manager"]),
     async (req, res) => {
         try {
             let client = await mongodb.connect(dbUrl);
